@@ -67,13 +67,20 @@ p { margin: 0 0 0.9rem; }
 .entries { list-style: none; margin: 0; padding: 0; }
 .entries > li { display: grid; grid-template-columns: var(--gutter) 1fr; column-gap: 1rem; padding: 0.45rem 0; }
 .entries .when { color: var(--muted); font-variant-numeric: tabular-nums; }
-.entries.wide { --gutter: 11rem; }
+/* 期間つきの一覧(職歴)。左の列の幅は、いちばん長い期間に自動で合わせる */
+.entries.wide { display: grid; grid-template-columns: max-content 1fr; column-gap: 1.5rem; }
+.entries.wide > li { display: contents; }
+.entries.wide > li > * { padding: 0.45rem 0; }
+.entries.wide .when { white-space: nowrap; }
 .entries.num { --gutter: 1.9rem; }          /* 通し番号つきの一覧 */
 .entries.num > li { column-gap: 0.6rem; }
 .entries.num .when { text-align: right; }
 .sub { margin: 0.25rem 0 0; font-size: 0.9375rem; color: var(--muted); }
 .sub a { margin-right: 0.9rem; }
 .res { white-space: nowrap; margin-left: 0.35rem; }
+
+/* ---- 年ごとに1行にまとめた一覧(国内発表) ---- */
+.yearline { margin: 0 0 0.5rem; }
 
 /* ---- ふつうの箇条書き ---- */
 .plain { margin: 0; padding-left: 1.15rem; }
@@ -86,6 +93,9 @@ footer { margin-top: 3.5rem; padding-top: 1rem; border-top: 1px solid var(--rule
   .profile h1 { font-size: 1.875rem; }
   .entries > li, .entries.wide > li { grid-template-columns: 1fr; }
   .entries .when:empty { display: none; }
+  .entries.wide { grid-template-columns: 1fr; }
+  .entries.wide > li > .when { padding-bottom: 0; }
+  .entries.wide > li > div { padding-top: 0; }
   .entries .when { font-size: 0.875rem; }
   .entries.num > li { grid-template-columns: var(--gutter) 1fr; }
   .entries.num .when { font-size: inherit; }
