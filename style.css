@@ -79,9 +79,6 @@ p { margin: 0 0 0.9rem; }
 .sub a { margin-right: 0.9rem; }
 .res { white-space: nowrap; margin-left: 0.35rem; }
 
-/* ---- 年ごとに1行にまとめた一覧(国内発表) ---- */
-.yearline { margin: 0 0 0.5rem; }
-
 /* ---- ふつうの箇条書き ---- */
 .plain { margin: 0; padding-left: 1.15rem; }
 .plain li { padding: 0.2rem 0; }
