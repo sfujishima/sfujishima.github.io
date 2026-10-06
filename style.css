@@ -81,6 +81,7 @@ p { margin: 0 0 0.9rem; }
 
 /* ---- 文章が長い箇条書き(Ph.D. Supervision) ---- */
 .prose { margin: 0; padding-left: 1.15rem; }
+ol.prose { padding-left: 1.5rem; }
 .prose li { margin: 0.6rem 0; }
 .prose ol, .prose ul { margin: 0.4rem 0 0; padding-left: 1.5rem; }
 .prose ol li, .prose ul li { margin: 0.35rem 0; }
