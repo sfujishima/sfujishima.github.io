@@ -68,6 +68,9 @@ p { margin: 0 0 0.9rem; }
 .entries > li { display: grid; grid-template-columns: var(--gutter) 1fr; column-gap: 1rem; padding: 0.45rem 0; }
 .entries .when { color: var(--muted); font-variant-numeric: tabular-nums; }
 .entries.wide { --gutter: 11rem; }
+.entries.num { --gutter: 1.9rem; }          /* 通し番号つきの一覧 */
+.entries.num > li { column-gap: 0.6rem; }
+.entries.num .when { text-align: right; }
 .sub { margin: 0.25rem 0 0; font-size: 0.9375rem; color: var(--muted); }
 .sub a { margin-right: 0.9rem; }
 .res { white-space: nowrap; margin-left: 0.35rem; }
@@ -84,4 +87,6 @@ footer { margin-top: 3.5rem; padding-top: 1rem; border-top: 1px solid var(--rule
   .entries > li, .entries.wide > li { grid-template-columns: 1fr; }
   .entries .when:empty { display: none; }
   .entries .when { font-size: 0.875rem; }
+  .entries.num > li { grid-template-columns: var(--gutter) 1fr; }
+  .entries.num .when { font-size: inherit; }
 }
